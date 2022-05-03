@@ -41,7 +41,7 @@ int main(void) {
 
     oled_start();                               // Initialize SSD1306 OLED
     oled_clear();                               // Clear OLED display
-    display_logo()
+    display_logo();
 
     _enable_interrupts();
     // gradually fill for ever and ever
