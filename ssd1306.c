@@ -309,7 +309,6 @@ void display_members(){
     char txtBlock6[93] = "Ertugrul Tiyek";
     oled_TextPrintBlock(0, 5, txtBlock6);
     LONG_DELAY;
-    oled_clear();
 }
 
 void display_logo(){

@@ -42,6 +42,7 @@ int main(void) {
     oled_start();                               // Initialize SSD1306 OLED
     oled_clear();                               // Clear OLED display
     display_logo();
+    oled_clear();
 
     _enable_interrupts();
     // gradually fill for ever and ever
@@ -64,6 +65,8 @@ __interrupt void button(void){
         P1IES ^= BIT4;
         if((btnPos & BIT4) == BIT4)
             display_members();
+            oled_clear();
+
     }
     else if((P1IFG & BIT4) == BIT4){
         btnPos ^= BIT3;
