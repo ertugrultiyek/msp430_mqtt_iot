@@ -24,9 +24,6 @@ int main(void) {
     initStrip();  // ***** HAVE YOU SET YOUR NUM_LEDS DEFINE IN WS2812.H? ******
     saveState(&spi);
 
-    // show the strip
-    showStrip();
-
     // initialize port1
     P1DIR = BIT0;
     P1REN |= (BIT3 | BIT4);
@@ -44,6 +41,7 @@ int main(void) {
 
     oled_start();                               // Initialize SSD1306 OLED
     oled_clear();                               // Clear OLED display
+    display_logo()
 
     _enable_interrupts();
     // gradually fill for ever and ever
